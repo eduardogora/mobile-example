@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import CallToAction from './components/call-to-action/CallToAction';
+import NavBar from './components/nav-bar/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src='https://upload.wikimedia.org/wikipedia/commons/2/21/Adams_The_Tetons_and_the_Snake_River.jpg' alt='' />
+      <NavBar/>
+      <div className='banner'>
+        <h1>"Any darn fool can make something complex; it takes a genius to make something simple"</h1>
+        <CallToAction>Learn more</CallToAction>
+      </div>
     </div>
   );
 }

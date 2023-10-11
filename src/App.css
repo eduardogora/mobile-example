@@ -1,38 +1,74 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  object-fit: scale-down;
+  /* object-position: 0 -500px; */
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
   color: white;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
 }
 
-.App-link {
-  color: #61dafb;
+.banner h1{
+  position: absolute;
+  top: 200px;
+  width: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: 800;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+:root{
+  --main-color: rgb(90, 155, 234);
+}
+
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+@keyframes ripple-fill-container {
+  from{
+    transform: scale(0, 1);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(2, 1);
   }
+}
+@keyframes ripple-empty-container {
+  from{
+    transform: scale(2, 1);
+  }
+  to {
+    transform: scale(0, 1);
+  }
+}
+
+span.ripple {
+  position: absolute; 
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.75s linear;
+  background-color: rgba(255, 255, 255, 0.5);
 }
