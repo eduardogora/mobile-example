@@ -3,7 +3,7 @@ import { createRipples } from '../../utils/button'
 
 
 const style = {
-    position: 'absolute',
+    position: 'relative',
     top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -13,7 +13,8 @@ const style = {
     fontWeight: '700',
     cursor: 'pointer',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    
 }
 
 function CallToAction({children}) {

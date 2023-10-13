@@ -28,7 +28,7 @@ img {
 }
 
 .banner h1{
-  position: absolute;
+  position: relative;
   top: 200px;
   width: 70%;
   left: 50%;
@@ -71,4 +71,12 @@ span.ripple {
   transform: scale(0);
   animation: ripple 0.75s linear;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*Todo lo que sea menor a esto, utilizara estas clases*/
+@media screen and (max-width: 40em){
+  img{
+    height: 100vh;
+    object-fit: cover;
+  }
 }

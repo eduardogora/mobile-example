@@ -1,0 +1,13 @@
+.btn{
+    position: 'absolute';
+    top: '45%';
+    left: '50%';
+    transform: 'translate(-50%, -50%)';
+    padding: '20px 40px';
+    background-color: aqua;
+    border-radius: '10px';
+    font-Weight: '700';
+    cursor: 'pointer';
+    position: 'relative';
+    overflow: 'hidden';
+}
